@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+    <link rel="stylesheet" href="bold.css">
+
+    <link rel="icon" href="logo2.png">
+
+    <title>RK GROUPS</title>
+
+    <style>
+        body {
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body style="background-color: lighblue;position: relative;">
+
+    <div class="navbar navbar-expand-sm navbar-fixed-top">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <div class="navbar-brand"><a href="index.html" class="text-dark deco-none"style="text-decoration:none">RK GROUPS
+                    </a></div>
+            </div>
+
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </button>
+
+            <div class="navbar-collapse" id="menu">
+                <ul class="navbar-nav" id="projects">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"
+                            data-toggle="dropdown">Articles</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="latest.html"><i class="fa fa-address-card nav-link"></i>Latest<span
+                                        class="badge">7</span></a></li>
+                            <li><a href="#"><i class="fa fa-newspaper-o nav-link disabled"
+                                        class="disabled">Blogs</i><span class="badge">0</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"
+                            data-toggle="dropdown">Projects</a>
+
+                        <ul class="dropdown-menu disabled" title="Login To Access"
+                            onmouseover="alert('Login to access Projects')">
+                            <li class="dropdown-header">Projects Done</li>
+                            <!-- <hr class="w-75" mx="auto"> -->
+                            <!-- mx-auto method both side same space left and right pt-0 means paddint top etcc.. 1-5 only allowed -->
+                            <!-- dropdown-item used to provide proper space adn proper mouse pointer -->
+                            <li><a href="articleJokes.html" class="dropdown-item"><i
+                                        class="fa fa-angellist"></i>Jokes</a> </li>
+                            <li><a href="bulb.html" class="dropdown-item"><i class="fa fa-lightbulb-o"></i>Bulb</a></li>
+                            <li><a href="TemperatureConversion.html" class="dropdown-item"><i
+                                        class="fa fa-thermometer-half"></i>Temperature Converison</a></li>
+                            <li class="dropdown-header"> Upcoming Projects</li>
+                            <!-- dropdown-item used to provide proper space adn proper mouse pointer -->
+                            <li><a href="#" class="dropdown-item disabled">API</a> </li>
+                            <li><a href="#" class="dropdown-item disabled">Google Keep Clone</a> </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="ml-auto">
+                    <li class="navbar-btn btn btn-outline-info" data-toggle="modal" data-target="#login">Login</li>
+                    <li class="navbar-btn btn btn-outline-danger" data-toggle="modal" data-target="#signup">Register
+                    </li>
+                </div>
+
+                <div class="modal fade" id="login">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="text-center">Login</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="data">
+                                    <label>UserName</label>
+                                    <div class="form-group form-floating">
+                                        <input type="number" placeholder="&#xf007;Enter RegisterNo"
+                                            class="form-control icon" id="name">
+                                    </div>
+                                    <div class="form-group form-floating">
+                                        <label>Password</label>
+                                        <input type="Password" placeholder="&#xf06e;Enter Password"
+                                            class="form-control icon fa fa-eye" id="pass">
+                                    </div>
+                                    <button type="submit" data-dismiss="modal" class="m-auto btn btn-outline-info"
+                                        onclick="login()">Submit</button>
+                                    <input type="reset" class="btn btn-outline-danger ms-auto" value="Reset">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="signup">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4>Register</h4>
+                                <button class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- <div class="card"> -->
+                                <!-- <div class="card-header">Fill the Below Details</div> -->
+                                <!-- <div class="card text"> -->
+                                <form style="justify-content: center;text-align: center;">
+                                    <input type="text" placeholder="&#xf031;FirstName" class="icon" required>
+                                    <br><br>
+                                    <input type="text" placeholder="&#xf031;LastName" class="icon" required><br><br>
+                                    <input type="email" placeholder="&#xf0e0;Email" autocomplete="on" class="icon"
+                                        required></i><br><br>
+                                    <input type="password" placeholder="&#xf06e;password" class="icon" required><br><br>
+                                    <input type="password" placeholder="&#xf06e;Confirm Password" class="icon"
+                                        required><br><br>
+                                    <div class="card-footer">
+                                        <input type="button" class="btn btn-outline-success" value="Submit" data-dismiss="modal"
+                                            onclick="RegistrationSuccessfull()">
+                                        <input type="reset" class="btn btn-outline-danger ms-auto" value="Reset">
+                                    </div>
+
+                                </form>
+                                <!-- </div> -->
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="jumbotron img">
+        <marquee>Welcome to RK GROUPS</marquee>
+        <h4 class="text-center text-white">Welcome to RK GROUPS</h4>
+        <p class="text-center text-white text-lg">Hope you Enjoy Visiting our Website</p>
+    </div> -->
+    <div class="container-fluid">
+        <div class="carousel slide" id="slideimages" data-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="images/bg1.jpg" alt="" style="width: 100vw;height: 90vh;">
+                    <div class="carousel-caption">
+                        <h5>Welcome To RK GROUPS</h5>
+                        <p>Have a Wonderful Day</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="images/bg2.jpg" alt="" style="width: 100vw;height: 90vh;">
+                    <div class="carousel-caption">
+                        <h5>Articles</h5>
+                        <button class="btn btn-primary" type="button"><a href="latest.html" class="text-white">Click To
+                                View Articles</a></button>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="images/bg3.jpg" alt="" style="width: 100vw;height: 90vh;">
+                    <div class="carousel-caption">
+                        <h5>Projects</h5>
+                        <button class="btn btn-primary" onmouseover="title='Login To Access Projects'"><a
+                                href="articleJokes.html" class="text-white" disabled>Click To View
+                                Projects</a></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <ul class="carousel-indicators">
+
+                <li data-target="#slideimages" data-slide-to="0" class="active"></li>
+                <li data-target="#slideimages" data-slide-to="1"></li>
+                <li data-target="#slideimages" data-slide-to="2"></li>
+
+            </ul>
+
+            <a href="#slideimages" data-slide="prev" class="carousel-control-prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a href="#slideimages" data-slide="next" class="carousel-control-next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-lf-4 col-md-4 col-sm-4 col-xs-12">
+                <img src="images/technology.jpg" alt="bulb" class="img-fluid rounded" style="padding-top: 15px;">
+            </div>
+            <div class="col-lf-4 col-md-4 col-sm-4 col-xs-12">
+                <img src="images/bg.webp" alt="scenery" class="img-fluid rounded-circle" style="padding-top: 15px;">
+            </div>
+            <div class="col-lf-4 col-md-4 col-sm-4 col-xs-12">
+                <img src="images/topstories1.jpg" alt="news" class="img-fluid img-thumbnail" style="padding-top: 15px;">
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="container">
+        <div class="card">
+            <img src="images/entertainement.jpg" alt="Thalapathy Vijay">
+            <div class="card-body">
+                <div class="card-header text-center">Entertainment</div>
+                <div class="card-title text-center text-danger">Thalapathy Vijay</div>
+                <div class="card-text" title="About Thalapathy Vijay">Joseph Vijay Chandrasekhar, known mononymously as
+                    Vijay, is an Indian actor, dancer, playback singer and philanthropist who works predominantly in
+                    Tamil cinema and also appeared in other Indian languages films. Vijay is the highest paid actor in
+                    South India.<br><br>Joseph Vijay Chandrasekhar (born 22 June 1974), known mononymously as Vijay, is
+                    an Indian actor, dancer, playback singer and philanthropist who works predominantly in Tamil cinema
+                    and also appeared in other Indian languages films. Referred to by fans and media as "Thalapathy"
+                    (commander), Vijay is the highest paid actor in Tamil cinema.</div>
+                <div>
+                    <ul class="pagination card-footer"
+                        style="display: flex;justify-content: center;text-align: center;">
+                        <li style="padding: 5px;"><a href="https://en.wikipedia.org/wiki/Vijay_(actor)"
+                                title="Thalapathy Vijay" class="btn btn-info">1</a></li>
+                        <li style="padding: 5px;"><a href="https://twitter.com/actorvijay?lang=en"
+                                title="official Twitter handle" class="btn btn-info">2</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br><br>
+
+        <br><br>
+
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-header text-center">Entertainment</div>
+                    <div class="card-title text-center text-danger">Thalapathy Vijay</div>
+                    <div class="card-text" title="About Thalapathy Vijay">Joseph Vijay Chandrasekhar, known mononymously
+                        as
+                        Vijay, is an Indian actor, dancer, playback singer and philanthropist who works predominantly in
+                        Tamil cinema and also appeared in other Indian languages films. Vijay is the highest paid actor
+                        in
+                        South India.<br><br>Joseph Vijay Chandrasekhar (born 22 June 1974), known mononymously as Vijay,
+                        is an Indian actor, dancer, playback singer and philanthropist who works predominantly in Tamil
+                        cinema and also appeared in other Indian languages films. Referred to by fans and media as
+                        "Thalapathy" (commander), Vijay is the highest paid actor in Tamil cinema.</div><br><br>
+                    <div style="display: flex;justify-content: center;text-align: center;">
+                        <img src="images/entertainement.jpg" class="img-fluid" alt="Thalapathy Vijay">
+                    </div><br>
+                    <div style="display: flex;justify-content: center;text-align: center;">
+                        <ul class="pagination">
+                            <li style="padding: 5px;"><a href="https://en.wikipedia.org/wiki/Vijay_(actor)"
+                                    title="Thalapathy Vijay" class="btn btn-info" target="none">1</a></li>
+                            <li style="padding: 5px;"><a href="https://twitter.com/actorvijay?lang=en"
+                                    title="official Twitter handle" class="btn btn-info" target="none">2</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="container" style="border: 1px solid red;">
+                <form>
+                    <h3 class="text-center">Login</h3>
+                    <hr>
+                    <div class="form-group">
+                        <label>UserId</label>
+                        <input type="text" placeholder="User ID" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" placeholder="Enter your Password" class="form-control">
+                    </div>
+                    <p class="text-center">Forgot Password?</p>
+                </form>
+            </div><br><br>
+
+            pagination-lg  pagination-sm can also be given for various sized
+
+            <ul class="pagination" style="display: flex;justify-content: center;text-align: center;">
+                <div class="pager previous page-link"><a href="bold.html">Previous</a></div>
+                <li class="page-item"><a href="https://www.w3schools.com/bootstrap/" class="page-link">1</a></li>
+                <li class="page-item"><a href="https://www.w3schools.com/bootstrap/bootstrap_wells.asp"
+                        class="page-link">2</a></li>
+                <li class="page-item"><a href="https://www.w3schools.com/bootstrap/bootstrap_buttons.asp"
+                        class="page-link">3</a></li>
+                <div class="pager next page-link"><a
+                        href="https://www.w3schools.com/bootstrap/bootstrap_wells.asp">Next</a></div>
+            </ul> -->
+
+    <br><br>
+
+    <div style="position:absolute;display: none;" id="value" class="col-2 text-center menu">
+        <ul class="list-group list-group-flush font-weight-bold">
+            <a href="index.html" class="list-group-item list-group-item-action"><i class="fa fa-home pr-2"
+                    aria-hidden="true"></i>Back To Home</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="location.reload()"><i
+                    class="fa fa-refresh pr-2" aria-hidden="true"></i>Reload</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="history.back()"><i class="fa fa-arrow-circle-left pr-3"></i>Back
+            </a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="history.forward()"><i
+                    class="fa fa-arrow-circle-right pr-2"></i>Forward</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="window.print()"><i
+                    class="fa fa-print pr-2"></i>Print</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="history.go(-2);"><i
+                    class="fa fa-angle-double-left pr-2"></i>Go Back</a>
+        </ul>
+    </div>
+
+    <br><br>
+    <script>
+        function showpass() {
+            var data = document.getElementById("pass");
+            if (data.type === "password") {
+                data.type = "text";
+            } else {
+                data.type = "password";
+            }
+        }
+    </script>
+
+    <!-- <script>
+        function login() {
+            var registerNo = ['1913032', '1913046', '1913078'];
+            var password = ['jaga', 'rk', 'sk'];
+            var userName = document.getElementById("name").value;
+            var pass = document.getElementById("pass").value;
+
+            if ((registerNo.includes(userName)) && (password.includes(pass))) {
+                swal("Good job!", "You Have Successfully logged in", "success"); 
+                if (window.confirm("Click To Access Project")) {
+                    window.open("articlejokes.html");
+                }
+
+            } else {
+                swal("Oh No!", "Username/Password incorrect", "error");
+            }
+        }
+    </script> -->
+
+    <script>
+        function RegistrationSuccessfull() {
+            swal("Good job!", "You Have Successfully Registered", "success");
+        }
+    </script>
+
+
+    <script src="menu.js"></script>
+    <script src="login.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
