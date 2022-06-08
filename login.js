@@ -18,7 +18,7 @@ function login() {
         }    
         setTimeout(function(){
             if (window.confirm("Click OK to Access Projects")) {
-                window.open("articlejokes.html");
+                window.open("articleJokes.html");
             }
         },3000);
     }else {
