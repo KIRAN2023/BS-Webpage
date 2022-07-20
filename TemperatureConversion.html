@@ -28,6 +28,41 @@
 
 <body style="background-color: cadetblue;">
     
+               <div class="navbar-collapse" id="menu">
+                <ul class="navbar-nav" id="projects">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"
+                            data-toggle="dropdown">Articles</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="latest.html"><i class="fa fa-address-card nav-link"></i>Latest<span
+                                        class="badge">7</span></a></li>
+                            <li><a href="#"><i class="fa fa-newspaper-o nav-link disabled"
+                                        class="disabled">Blogs</i><span class="badge">0</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"
+                            data-toggle="dropdown">Projects</a>
+
+                        <ul class="dropdown-menu disabled" title="Login To Access"
+                            onmouseover="alert('Login to access Projects')">
+                            <li class="dropdown-header">Projects Done</li>
+                            <!-- <hr class="w-75" mx="auto"> -->
+                            <!-- mx-auto method both side same space left and right pt-0 means paddint top etcc.. 1-5 only allowed -->
+                            <!-- dropdown-item used to provide proper space adn proper mouse pointer -->
+                            <li><a href="articleJokes.html" class="dropdown-item"disabled><i
+                                        class="fa fa-angellist"></i>Jokes</a> </li>
+                            <li><a href="bulb.html" class="dropdown-item"disabled><i class="fa fa-lightbulb-o"></i>Bulb</a></li>
+                            <li><a href="TemperatureConversion.html" class="dropdown-item"disabled><i
+                                        class="fa fa-thermometer-half"></i>Temperature Converison</a></li>
+                            <li class="dropdown-header"> Upcoming Projects</li>
+                            <!-- dropdown-item used to provide proper space adn proper mouse pointer -->
+                            <li><a href="#" class="dropdown-item disabled">API</a> </li>
+                            <li><a href="#" class="dropdown-item disabled">Google Keep Clone</a> </li>
+                        </ul>
+                    </li>
+                </ul>
+              </div>
+    
  
     <div class="container">
         <div class="row">
@@ -72,6 +107,23 @@
                 onclick="window.print()">Print</a>
             <a href="#" class="list-group-item list-group-item-action"
                 onclick="history.go(-2);">Go Back</a>
+        </ul>
+    </div>
+    
+        <div style="position:absolute;display: none;" id="value" class="col-2 text-center menu">
+        <ul class="list-group list-group-flush font-weight-bold">
+            <a href="index.html" class="list-group-item list-group-item-action"><i class="fa fa-home pr-2"
+                    aria-hidden="true"></i>Back To Home</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="location.reload()"><i
+                    class="fa fa-refresh pr-2" aria-hidden="true"></i>Reload</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="history.back()"><i class="fa fa-arrow-circle-left pr-3"></i>Back
+            </a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="history.forward()"><i
+                    class="fa fa-arrow-circle-right pr-2"></i>Forward</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="window.print()"><i
+                    class="fa fa-print pr-2"></i>Print</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="history.go(-2);"><i
+                    class="fa fa-angle-double-left pr-2"></i>Go Back</a>
         </ul>
     </div>
 
