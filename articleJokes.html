@@ -17,18 +17,20 @@
 
 <body style="background-color: cadetblue;">
 
-    <div style="position:absolute;display: none;" id="value" class="col-2 text-center">
-        <ul class="list-group list-group-flush font-weight-bold ">
-            <a href="#" class="list-group-item list-group-item-action list-group-outile-primary"
-                onclick="location.reload()">Reload</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-outile-primary"
-                onclick="history.back()">Back</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-outile-primary"
-                onclick="history.forward()">Forward</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-outile-primary"
-                onclick="window.print()">Print</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-outile-primary"
-                onclick="history.go(-2);">Go Back</a>
+   <div style="position:absolute;display: none;" id="value" class="col-2 text-center menu">
+        <ul class="list-group list-group-flush font-weight-bold">
+            <a href="RK_GROUPS.html" class="list-group-item list-group-item-action"><i class="fa fa-home pr-2"
+                    aria-hidden="true"></i>Back To Home</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="location.reload()"><i
+                    class="fa fa-refresh pr-2" aria-hidden="true"></i>Reload</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="history.back()"><i class="fa fa-arrow-circle-left pr-3"></i>Back
+            </a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="history.forward()"><i
+                    class="fa fa-arrow-circle-right pr-2"></i>Forward</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="window.print()"><i
+                    class="fa fa-print pr-2"></i>Print</a>
+            <a href="#" class="list-group-item list-group-item-action" onclick="history.go(-2);"><i
+                    class="fa fa-angle-double-left pr-2"></i>Go Back</a>
         </ul>
     </div>
 
