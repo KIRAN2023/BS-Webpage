@@ -21,7 +21,7 @@ function login() {
             if (window.confirm("Click OK to Access Projects")) {
                 window.open("articleJokes.html");
             }
-        },3000);
+        },5000);
     }else {
         swal("Oh No!", "Username/Password incorrect", "error");
     }
