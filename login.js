@@ -3,8 +3,7 @@ function login() {
     var password = ['jaga', 'rk', 'sk','rk','Aspire'];
     var userName = document.getElementById("name").value;
     var pass = document.getElementById("pass").value;
-    console.log(`${registerNo}`)
-
+    
     if ((registerNo.includes(userName)) && (password.includes(pass))) {
         swal("Good job!", "You Have Successfully logged in", "success"); 
         if(userName=='1913032'){
@@ -15,9 +14,9 @@ function login() {
             swal(`Welcome SAKTHIVEL`, "Check The Alert to Access The Projects", "success");
         }else if(userName=='19220150'){
             swal(`Welcome ROHINI KIRAN`, "Check The Alert to Access The Projects", "success");
-        }else if(userName=='27072023'){
-            swal(`Welcome Aspire Systems`, "Check out the Alert Message to Access The Projects THANK YOU!", "success");
-        }      
+        }else{
+            swal(`Welcome Aspire Systems`, "Check The Alert to Access The Projects THANK YOU!", "success");
+        }     
         setTimeout(function(){
             if (window.confirm("Click OK to Access Projects")) {
                 window.open("articleJokes.html");
