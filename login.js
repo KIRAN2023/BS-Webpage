@@ -1,6 +1,6 @@
 function login() {
-    var registerNo = ['1913032', '1913046', '1913078','19220150'];
-    var password = ['jaga', 'rk', 'sk','rk'];
+    var registerNo = ['1913032', '1913046', '1913078','19220150','27072023'];
+    var password = ['jaga', 'rk', 'sk','rk','Aspire'];
     var userName = document.getElementById("name").value;
     var pass = document.getElementById("pass").value;
     console.log(`${registerNo}`)
